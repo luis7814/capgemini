@@ -10,9 +10,12 @@ public class PrintMessage {
 	public static final String VALIDATE_CUSTOMER_MOBILE = "Debe ingresar un número de celular";
 	public static final String VALIDATE_CUSTOMER_PASSWORD = "Debe ingresar una constraseña";
 	
+	
 	public static final int STATUS_CODE_OK = 0;
 	public static final int STATUS_CODE_ERROR = 1;
 	
+	public static final String STATUS = "ACTIVE";
+	public static final String STATUS_TRANSACTION = "APPROVED";
 	public static final String STATUS_DESC_OK = "SUCCES";
 	public static final String STATUS_DESC_ERROR = "ERROR";
 	
@@ -24,7 +27,9 @@ public class PrintMessage {
 	public static final String ROLE_USER = "ROLE_USER";
 	public static final String BEARER = "Bearer ";
 	
-	public static final String STATUS = "ACTIVE";
+	
+	
+	
 	
 	
 	
