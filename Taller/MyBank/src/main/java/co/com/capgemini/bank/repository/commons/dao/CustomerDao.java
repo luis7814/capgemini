@@ -1,5 +1,7 @@
 package co.com.capgemini.bank.repository.commons.dao;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -17,17 +19,19 @@ public class CustomerDao implements ICustomerDao {
 	public void signUp(Customer customer) throws Exception {
 		// TODO Auto-generated method stub
 		
+		customer.setId(iCustomerRepository.findTopByOrderByIdDesc().getId() + 1);
+		
 		iCustomerRepository.saveAndFlush(customer);
 		
 	}
 
 
 	@Override
-	public Customer getCustomerById(Long customerId) throws Exception {
+	public Customer getCustomerById(String customerId) throws Exception {
 		// TODO Auto-generated method stub
 		
 		Customer customer = null;
-		customer = iCustomerRepository.getOne(customerId);
+		customer = iCustomerRepository.findByCustomerId(customerId);
 		
 		return customer;
 	}
@@ -39,6 +43,19 @@ public class CustomerDao implements ICustomerDao {
 		
 		Customer customer = null;
 		customer = iCustomerRepository.findByCustomerIdAndPassword(customerId, password);
+		
+		return customer;
+	}
+
+
+	@Override
+	public Customer getCustomerById(Long id) throws Exception {
+		
+		Customer customer = null;
+		Optional<Customer> optionalCustomer = Optional.empty();
+		
+		optionalCustomer = iCustomerRepository.findById(id);
+		customer = optionalCustomer.get();
 		
 		return customer;
 	}

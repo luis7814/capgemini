@@ -39,7 +39,8 @@ public class LoginServices implements ILoginServices{
 			if(validateMessage.equals("")) {
 				
 				customer = iCustomerDao.login(customerId, password);
-				responseService.setResponse(customer.getPassword());
+				responseService = utilities.responseService(PrintMessage.STATUS_CODE_OK, customer.getCustomerId());
+				
 				
 			}else {
 				validateMessage = "Los siguientes datos son obligatorios : \n " + validateMessage;

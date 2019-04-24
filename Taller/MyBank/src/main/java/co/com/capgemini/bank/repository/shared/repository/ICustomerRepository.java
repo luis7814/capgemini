@@ -8,4 +8,7 @@ public interface ICustomerRepository extends JpaRepository<Customer, Long>{
 	
 	Customer findByCustomerIdAndPassword(String customerId, String password);
 
+	Customer findByCustomerId(String customerId);
+	Customer findTopByOrderByIdDesc();
+
 }

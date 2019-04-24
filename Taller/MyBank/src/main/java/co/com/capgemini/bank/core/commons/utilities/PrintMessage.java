@@ -16,6 +16,15 @@ public class PrintMessage {
 	public static final String STATUS_DESC_OK = "SUCCES";
 	public static final String STATUS_DESC_ERROR = "ERROR";
 	
+	public static final String HEADER = "Authorization";
+	public static final String PREFIX = "Bearer ";
+	public static final String SECRET = "mySecretKey";
+	public static final String AUTHORITIES = "authorities";
+	public static final String SOFTTEKJWT = "softtekJWT";
+	public static final String ROLE_USER = "ROLE_USER";
+	public static final String BEARER = "Bearer ";
+	
+	public static final String STATUS = "ACTIVE";
 	
 	
 	
