@@ -1,5 +1,10 @@
 package co.com.capgemini.bank.core.commons.utilities;
 
+/*
+ * Clase : PrintMessage.java
+ * Comentario : Clase que se encarga de cargar los mensajes constantes dentro de la aplicación
+ */
+
 public class PrintMessage {
 	
 	

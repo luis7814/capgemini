@@ -3,6 +3,11 @@ package co.com.capgemini.bank.core.commons.utilities;
 import co.com.capgemini.bank.core.commons.entities.ResponseService;
 import co.com.capgemini.bank.core.commons.entities.Status;
 
+/*
+ * Clase : Utilities.java
+ * Comentario : Clase que contiene metodos transversales para la aplicación
+ */
+
 public class Utilities {
 	
 	public ResponseService responseService(int statusCode, String response) {

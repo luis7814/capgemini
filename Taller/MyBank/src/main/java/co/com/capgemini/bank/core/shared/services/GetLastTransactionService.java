@@ -14,6 +14,11 @@ import co.com.capgemini.bank.repository.commons.entities.Customer;
 import co.com.capgemini.bank.repository.commons.entities.CustomerProduct;
 import co.com.capgemini.bank.repository.commons.entities.Transaction;
 
+/*
+ * Clase : GetLastTransactionService.java
+ * Comentario : Obtenga las últimas transacciones para un cliente y un producto 
+ */
+
 @Service
 public class GetLastTransactionService implements IGetLastTransactionService{
 
@@ -70,12 +75,16 @@ public class GetLastTransactionService implements IGetLastTransactionService{
 							break;
 						}
 					}
-				}			
+				}else {
+					transactionVos = null;
+				}
+			}else {
+				transactionVos = null;
 			}
 			
 			
 		}catch (Exception e) {
-			
+			transactionVos = null;
 		}
 		
 		return transactionVos;

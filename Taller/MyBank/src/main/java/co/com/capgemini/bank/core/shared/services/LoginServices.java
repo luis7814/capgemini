@@ -9,6 +9,12 @@ import co.com.capgemini.bank.core.commons.utilities.Utilities;
 import co.com.capgemini.bank.repository.commons.dao.ICustomerDao;
 import co.com.capgemini.bank.repository.commons.entities.Customer;
 
+/*
+ * Clase : LoginServices.java
+ * Comentario : Inicia sesión en el cliente y obtiene el token de autenticación 
+ * 
+ */
+
 @Service
 public class LoginServices implements ILoginServices{
 
@@ -48,8 +54,7 @@ public class LoginServices implements ILoginServices{
 			}
 			
 		}catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+			responseService = utilities.responseService(PrintMessage.STATUS_CODE_ERROR, "Error Técnico.");
 		}
 		
 		return responseService;

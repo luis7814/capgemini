@@ -17,6 +17,11 @@ import co.com.capgemini.bank.repository.commons.entities.Customer;
 import co.com.capgemini.bank.repository.commons.entities.CustomerProduct;
 import co.com.capgemini.bank.repository.commons.entities.Product;
 
+/*
+ * Clase : CreateCustomerProductService.java
+ * Comentario : Crear producto para el cliente 
+ */
+
 @Service
 public class CreateCustomerProductService implements ICreateCustomerProductService{
 
@@ -73,7 +78,7 @@ public class CreateCustomerProductService implements ICreateCustomerProductServi
 			
 			
 		}catch (Exception e) {
-			// TODO: handle exception
+			responseService = utilities.responseService(PrintMessage.STATUS_CODE_ERROR, "Error técnico.");
 		}
 		return responseService;
 		

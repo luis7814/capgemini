@@ -19,6 +19,11 @@ import co.com.capgemini.bank.core.shared.services.IGetCustomerServices;
 import co.com.capgemini.bank.core.shared.services.ILoginServices;
 import co.com.capgemini.bank.core.shared.services.ISignUpServices;
 
+/*
+ * Clase : CustomerController.java
+ * Comentario : Clase que se encarga de gestionar los servicios Customer
+ * 
+ */
 @RestController
 public class CustomerController {
 
@@ -72,10 +77,6 @@ public class CustomerController {
 		customerVo = iGetCustomerServices.getCustomerById(customerId);
 		
 		return new ResponseEntity<>(customerVo, HttpStatus.OK);
-		
-		
-		
-		
 		
 	}
 }

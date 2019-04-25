@@ -14,6 +14,12 @@ import co.com.capgemini.bank.core.commons.entities.ResponseService;
 import co.com.capgemini.bank.core.shared.services.ICreateCustomerProductService;
 import co.com.capgemini.bank.core.shared.services.IGetCustomerProductService;
 
+/*
+ * Clase : CustomerProductController.java
+ * Comentario : Clase que se encarga de gestionar los servicios Rest CustomerProduct
+ * 
+ */
+
 @RestController
 public class CustomerProductController {
 

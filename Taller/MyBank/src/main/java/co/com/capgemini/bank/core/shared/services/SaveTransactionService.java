@@ -19,6 +19,11 @@ import co.com.capgemini.bank.repository.commons.entities.Customer;
 import co.com.capgemini.bank.repository.commons.entities.CustomerProduct;
 import co.com.capgemini.bank.repository.commons.entities.Transaction;
 
+/*
+ * Clase : SaveTransactionService.java
+ * Comentario : Almacena la información de la transacción 
+ */
+
 @Service
 public class SaveTransactionService implements ISaveTransactionService{
 
@@ -105,7 +110,8 @@ public class SaveTransactionService implements ISaveTransactionService{
 			
 						
 		}catch (Exception e) {
-			e.printStackTrace();
+			responseTransaction.setMessage("Customer product not found");
+			responseTransaction.setDetail(null);
 		}
 		
 		return responseTransaction;

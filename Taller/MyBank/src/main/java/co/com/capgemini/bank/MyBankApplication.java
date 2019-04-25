@@ -28,6 +28,10 @@ public class MyBankApplication {
 				.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 				.authorizeRequests()
 				.antMatchers(HttpMethod.POST, "/login").permitAll()
+				.antMatchers("/v2/api-docs").permitAll()
+				.antMatchers("/configuration/**").permitAll()
+				.antMatchers("/swagger*/**").permitAll()
+				.antMatchers("/webjars/**").permitAll()
 				.anyRequest().authenticated();
 		}
 	}

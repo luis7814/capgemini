@@ -13,6 +13,11 @@ import co.com.capgemini.bank.repository.commons.entities.Customer;
 import co.com.capgemini.bank.repository.commons.entities.CustomerProduct;
 import co.com.capgemini.bank.repository.commons.entities.Product;
 
+/*
+ * Clase : GetCustomerProductService.java
+ * Comentario : Obtenga información del producto para clientes 
+ */
+
 @Service
 public class GetCustomerProductService implements IGetCustomerProductService{
 
@@ -22,7 +27,8 @@ public class GetCustomerProductService implements IGetCustomerProductService{
 	@Autowired
 	private ICustomerProductDao iCustomerProductDao;
 	
-	@Autowired ICustomerDao iCustomerDao;
+	@Autowired 
+	private ICustomerDao iCustomerDao;
 	
 	@Override
 	public CustomerProductVo getCustomerProduct(String customerId, String productNumber) {
@@ -61,8 +67,7 @@ public class GetCustomerProductService implements IGetCustomerProductService{
 			}	
 			
 		}catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+			customerProductVo = null;
 		}
 		
 		return customerProductVo;
@@ -105,8 +110,7 @@ public class GetCustomerProductService implements IGetCustomerProductService{
 			}	
 			
 		}catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+			customerProductVo = null;
 		}
 		
 		return customerProductVo;

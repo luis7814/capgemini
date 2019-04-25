@@ -12,6 +12,11 @@ import co.com.capgemini.bank.core.commons.entities.ProductVo;
 import co.com.capgemini.bank.repository.commons.dao.IProductDao;
 import co.com.capgemini.bank.repository.commons.entities.Product;
 
+/*
+ * Clase : GetProductListService.java
+ * Comentario : Obtener una lista de productos bancarios (ahorros, cheques, etc.) 
+ */
+
 @Service
 public class GetProductListService implements IGetProductListService{
 
@@ -29,11 +34,14 @@ public class GetProductListService implements IGetProductListService{
 			
 			products = iProductDao.getProductList();
 			
-			productVos = objectMapper.convertValue(products, new TypeReference<List<ProductVo>>(){});
-			
+			if(products != null) {
+				productVos = objectMapper.convertValue(products, new TypeReference<List<ProductVo>>(){});
+			}else {
+				productVos = null;
+			}
 			
 		}catch (Exception e) {
-			// TODO: handle exception
+			productVos = null;
 		}
 		
 		return productVos;

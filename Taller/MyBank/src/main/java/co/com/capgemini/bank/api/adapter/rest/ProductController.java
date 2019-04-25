@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import co.com.capgemini.bank.core.commons.entities.ProductVo;
 import co.com.capgemini.bank.core.shared.services.IGetProductListService;
 
+/*
+ * Clase : ProductController.java
+ * Comentario : Clase que se encarga de gestionar los servicios Rest Product
+ * 
+ */
+
 @RestController
 public class ProductController {
 

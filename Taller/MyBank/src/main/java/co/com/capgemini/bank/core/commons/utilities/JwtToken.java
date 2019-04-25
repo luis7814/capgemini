@@ -10,6 +10,11 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+/*
+ * Clase : JWTToken.java
+ * Comentario : Clase que genera el token que será utilizado por los demás servicios
+ */
+
 public class JwtToken {
 
 	public String getJWTToken(String username) {

@@ -1,5 +1,10 @@
 package co.com.capgemini.bank.core.commons.utilities;
 
+/*
+ * Clase : JWTAuthorizationFilter.java
+ * Comentario : Clase que se encarga de validar el token generado por el servicio de login
+ */
+
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -10,6 +10,11 @@ import co.com.capgemini.bank.core.commons.entities.CustomerVo;
 import co.com.capgemini.bank.repository.commons.dao.ICustomerDao;
 import co.com.capgemini.bank.repository.commons.entities.Customer;
 
+/*
+ * Clase : GetCustomerServices.java
+ * Comentario : Obtiene la información del cliente por identificador de cliente (identificador de documento) 
+ */
+
 @Service
 public class GetCustomerServices implements IGetCustomerServices{
 
@@ -33,12 +38,12 @@ public class GetCustomerServices implements IGetCustomerServices{
 				customerVo = objectMapper.convertValue(customer, new TypeReference<CustomerVo>() {});
 				customerVo.setId(null);
 				customerVo.setPassword("******");
+			}else {
+				customerVo = null;
 			}
 			
-			
-			
 		}catch (Exception e) {
-			e.printStackTrace();
+			customerVo = null;
 		}
 		
 		return customerVo;

@@ -13,6 +13,11 @@ import co.com.capgemini.bank.core.commons.utilities.Utilities;
 import co.com.capgemini.bank.repository.commons.dao.ICustomerDao;
 import co.com.capgemini.bank.repository.commons.entities.Customer;
 
+/*
+ * Clase : SignUpServices.java
+ * Comentario : Registra al usuario con el sistema para crear nuevos clientes 
+ */
+
 @Service
 public class SignUpServices implements ISignUpServices{
 
@@ -21,7 +26,6 @@ public class SignUpServices implements ISignUpServices{
 	
 	@Override
 	public ResponseService insertCustomer(CustomerVo customerVo) {
-		// TODO Auto-generated method stub
 		
 		String validateMessage = "";
 		
@@ -70,7 +74,6 @@ public class SignUpServices implements ISignUpServices{
 			}
 			
 		}catch (Exception e) {
-			// TODO: handle exception
 			responseService = utilities.responseService(PrintMessage.STATUS_CODE_ERROR, e.getMessage());
 		}
 		
