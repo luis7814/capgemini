@@ -1,6 +1,7 @@
 package co.com.capgemini.bank.core.shared.services;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
@@ -48,7 +49,7 @@ public class GetCustomerTests {
 				if(a == 1) {
 					customer = null;
 					when(iCustomerDao.getCustomerById(customerId)).thenReturn(customer);
-					assertNotNull(getCustomerServices.getCustomerById(customerId));
+					assertNull(getCustomerServices.getCustomerById(customerId));
 				}
 			}
 			

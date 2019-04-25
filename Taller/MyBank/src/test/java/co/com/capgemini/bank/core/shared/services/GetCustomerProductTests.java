@@ -1,6 +1,5 @@
 package co.com.capgemini.bank.core.shared.services;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.when;
 
@@ -11,8 +10,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import co.com.capgemini.bank.core.commons.entities.CustomerVo;
-import co.com.capgemini.bank.core.commons.utilities.PrintMessage;
 import co.com.capgemini.bank.core.utilities.TestCase;
 import co.com.capgemini.bank.repository.commons.dao.ICustomerDao;
 import co.com.capgemini.bank.repository.commons.dao.ICustomerProductDao;
